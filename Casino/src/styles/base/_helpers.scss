@@ -1,0 +1,12 @@
+// FONT SIZE HELPERS
+.font-size {
+  &__small {
+    font-size: 1rem;
+  }
+  &__medium {
+    font-size: 1.5rem;
+  }
+  &__huge {
+    font-size: 3rem;
+  }
+}

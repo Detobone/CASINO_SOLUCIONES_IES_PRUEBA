@@ -1,0 +1,54 @@
+.nav {
+  @include flexSBetween;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  //   border: solid 3px blueviolet;
+
+  &__ul {
+    list-style: none;
+    margin: auto 0;
+    font-size: $fs-big;
+    color: $color-white;
+    align-content: center;
+
+    &:hover > :not(:hover) {
+      opacity: 0.4;
+    }
+  }
+  &__li {
+    cursor: pointer;
+    width: 100%;
+    text-underline-offset: 2rem;
+    text-decoration-line: none;
+    padding: 4rem 0;
+    border-bottom: solid 1.5px $color-grey-light-1;
+    color: $color-primary;
+    transition: opacity 0.6s ease, text-decoration-line 600ms ease-in 1s;
+
+    &:hover {
+      will-change: text-decoration-line, border-bottom;
+      text-decoration-line: underline;
+      font-weight: bold;
+      border-bottom: none;
+      backface-visibility: hidden;
+    }
+  }
+
+  &__link {
+    height: 100%;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      //   color: $color-white;
+      color: $color-black;
+
+      &:active {
+        text-decoration: none;
+        color: $color-white;
+        opacity: 1;
+      }
+    }
+  }
+}

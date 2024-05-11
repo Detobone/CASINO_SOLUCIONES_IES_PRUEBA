@@ -1,0 +1,66 @@
+@mixin flexSBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flexSAround {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin flexSEvenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+//MEDIA QUERY MANNAGER
+
+/* 
+0-600PX: Phone
+600-900px: Tablet portrait
+600-1140px: Tablet landscape
+1000px +: big desktop
+ 
+$breakpoint argument choices:
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+We will use em instead of rem because rem used to fail in some browsers within media queries
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      // 600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 112.4em) {
+      //71.25
+      // 1140px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    // 1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

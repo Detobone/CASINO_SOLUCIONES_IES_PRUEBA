@@ -1,0 +1,17 @@
+@keyframes enhence-header {
+  to {
+    background: linear-gradient($color-primary, $color-tertiary);
+    backdrop-filter: blur(5px);
+    font-size: $fs-huge;
+    color: $color-white;
+  }
+}
+
+@keyframes under-line {
+  from {
+    text-decoration-line: none;
+  }
+  to {
+    text-decoration-line: underline;
+  }
+}

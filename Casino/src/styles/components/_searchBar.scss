@@ -1,0 +1,23 @@
+.search {
+  @include flexSBetween;
+  border: solid 1px white;
+  min-width: 25%;
+  min-height: 75%;
+  padding: 0.5rem;
+  transition: width 1.5s ease-in-out 200ms;
+
+  &__input {
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    width: 80%;
+  }
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus-within {
+    width: 40%;
+  }
+  &:not(:focus-within) {
+    min-width: 25%;
+  }
+}

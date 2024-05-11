@@ -1,0 +1,70 @@
+.app-layout {
+  background-color: $color-primary;
+  min-height: 100svh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 5fr;
+  grid-template-areas:
+    'header header'
+    'navbar main';
+  // 'footer footer';
+  border: solid 2px rgb(77, 173, 173);
+
+  &--logged {
+    // display: grid;
+    // grid-template-rows: auto;
+    grid-template-columns: 7fr;
+    grid-template-areas:
+      'header'
+      'main';
+    //   'footer';
+    position: relative;
+  }
+}
+
+.row-1 {
+  grid-area: header;
+  height: 8vh;
+  position: fixed;
+  background: linear-gradient($color-primary, $color-tertiary);
+  //   margin-top: 0;
+  width: 100vw;
+  z-index: 10;
+  border: solid 3px rgb(78, 73, 212);
+
+  animation: enhence-header linear both;
+  animation-timeline: scroll(root block);
+  animation-range: 0 200px;
+}
+
+.column-1 {
+  grid-area: navbar;
+  background-color: $color-secondary;
+  background: linear-gradient($color-primary, $color-tertiary);
+
+  position: fixed;
+  top: 0;
+  width: 23.5vw;
+  height: 92vh;
+  margin-top: 8vh;
+  padding: 0.5rem;
+  z-index: 5;
+  border: solid 2px rgb(1, 29, 29);
+}
+
+.column-2 {
+  grid-column: 1/-1;
+  height: auto;
+  margin-top: 8vh;
+  overflow: hidden;
+
+  &__logged {
+    grid-area: main;
+    height: auto;
+    width: 76vw;
+    background-color: rgb(78, 73, 212) c9df;
+    margin-top: 8vh;
+    // border: solid 3px rgb(78, 73, 212);
+  }
+}

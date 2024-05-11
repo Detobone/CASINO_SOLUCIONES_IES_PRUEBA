@@ -1,0 +1,9 @@
+.header {
+  width: 100%;
+  height: 100%;
+  //   background-color: $color-primary;
+  @include flexSBetween;
+  align-items: center;
+  padding: 2rem;
+  font-size: $fs-medium;
+}
