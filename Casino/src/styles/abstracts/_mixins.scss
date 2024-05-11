@@ -17,6 +17,21 @@
   justify-content: center;
 }
 
+// BUTTONS
+@mixin btnNoBorder {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+//POSITION
+@mixin center {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
 //MEDIA QUERY MANNAGER
 
 /* 

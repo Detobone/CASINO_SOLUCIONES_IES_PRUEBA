@@ -9,7 +9,7 @@ export const SearchBar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSearch(query); //TODO: pendiente de definir esta fn
+    // onSearch(query); //TODO: pendiente de definir esta fn
   };
 
   return (
@@ -21,7 +21,7 @@ export const SearchBar = () => {
         onChange={handleChange}
         placeholder="Buscar..."
       />
-      <button className="btn__search" type="submit">
+      <button className="btn btn__search" type="submit">
         Buscar
       </button>
     </form>

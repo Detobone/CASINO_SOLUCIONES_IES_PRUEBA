@@ -46,6 +46,12 @@ body {
   background-color: #f0f2f5;
 }
 
+.error-message {
+  color: red;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .font-size__small {
   font-size: 1rem;
 }
@@ -76,10 +82,8 @@ body {
   grid-area: header;
   height: 8vh;
   position: fixed;
-  background: linear-gradient(#ecd1a5, #b46c22);
   width: 100vw;
   z-index: 10;
-  border: solid 3px rgb(78, 73, 212);
   animation: enhence-header linear both;
   animation-timeline: scroll(root block);
   animation-range: 0 200px;
@@ -113,6 +117,41 @@ body {
   margin-top: 8vh;
 }
 
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  color: #424949;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn__no-border {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.btn__search {
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
+  height: 4.5rem;
+  background: rgb(236, 209, 165);
+}
+.btn__search:hover {
+  box-shadow: 2px 1px 2px rgb(236, 209, 165);
+  font-weight: 600;
+  -webkit-backdrop-filter: invert(80%);
+          backdrop-filter: invert(80%);
+}
+.btn__form {
+  background: linear-gradient();
+}
+
 .header {
   width: 100%;
   height: 100%;
@@ -121,8 +160,22 @@ body {
   align-items: center;
   padding: 2rem;
   font-size: 2rem;
+  background-size: cover;
+  background-blend-mode: hue;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(to right bottom, #ecd1a5, #ce8e47), url("../assets/images/ruleta-2.webp");
+}
+.header:hover {
+  background-blend-mode: darken;
 }
 
+/* 
+  // background-position: cover;
+  background-origin: content-box;
+  backdrop-filter: inver(90%);
+  filter: contrast(50%);
+*/
 .nav {
   display: flex;
   justify-content: space-between;
@@ -173,11 +226,10 @@ body {
 .search {
   display: flex;
   justify-content: space-between;
-  border: solid 1px white;
   min-width: 25%;
   min-height: 75%;
   padding: 0.5rem;
-  transition: width 1.5s ease-in-out 200ms;
+  transition: width 1.5s ease-in-out 1s;
 }
 .search__input {
   border-radius: 5px;
@@ -189,4 +241,68 @@ body {
 }
 .search:not(:focus-within) {
   min-width: 25%;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  border: solid 1px orange;
+  position: relative;
+  background-color: transparent;
+}
+.login-form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border: solid 1px rgb(250, 250, 250);
+  border-radius: 5px;
+  width: 35%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  padding: 1.5rem;
+  font-size: 2rem;
+  background-color: #ecd1a5;
+  opacity: 0.8;
+  -webkit-backdrop-filter: blur(100%);
+          backdrop-filter: blur(100%);
+}
+.login-form__label {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.login-form__input {
+  border-radius: 5px;
+  font-size: 2.5rem;
+  padding: 0.5rem;
+}
+.login-form button {
+  background-color: #ce8e47;
+  height: 4rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  align-self: center;
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.85;
+  overflow: hidden;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }/*# sourceMappingURL=index.css.map */

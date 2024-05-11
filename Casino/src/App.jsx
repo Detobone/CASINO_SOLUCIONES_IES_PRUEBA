@@ -3,7 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Header, NavBar } from './components';
 
 export function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const location = useLocation();
   return (
     <>

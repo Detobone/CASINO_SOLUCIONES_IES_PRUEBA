@@ -10,7 +10,7 @@ export const Header = () => {
         <img className="profilePicture" src="" alt="" />
       </div>
       <SearchBar />
-      <button onClick={() => navigate('/login')}>
+      <button className="btn btn__search" onClick={() => navigate('/login')}>
         Iniciar Sesión/Cerrar Sesión
       </button>
     </header>

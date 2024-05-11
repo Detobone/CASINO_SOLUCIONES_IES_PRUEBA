@@ -6,4 +6,25 @@
   align-items: center;
   padding: 2rem;
   font-size: $fs-medium;
+
+  background-size: cover;
+  background-blend-mode: hue;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(
+      to right bottom,
+      $color-primary,
+      $color-secondary
+    ),
+    url('../assets/images/ruleta-2.webp');
+
+  &:hover {
+    background-blend-mode: darken;
+  }
 }
+/* 
+  // background-position: cover;
+  background-origin: content-box;
+  backdrop-filter: inver(90%);
+  filter: contrast(50%);
+*/

@@ -1,0 +1,44 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    // display: inline-block;
+    transition: all 0.2s;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    color: $color-grey-dark;
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &__no-border {
+    @include btnNoBorder;
+  }
+
+  &__search {
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+    height: 4.5rem;
+    // border: solid 1px $color-white;
+    background: rgb(236, 209, 165);
+    &:hover {
+      box-shadow: 2px 1px 2px rgb(236, 209, 165);
+      font-weight: 600;
+      backdrop-filter: invert(80%);
+    }
+  }
+
+  &__form {
+    background: linear-gradient();
+  }
+
+  //   &__ {
+  //   }
+}

@@ -5,6 +5,9 @@
 @import './base/helpers';
 
 @import './components/appLayout';
+@import './components/buttons';
 @import './components/header';
 @import './components/navBar';
 @import './components/searchBar';
+
+@import './routes/login';

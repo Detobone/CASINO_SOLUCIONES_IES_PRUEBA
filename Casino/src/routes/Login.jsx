@@ -46,42 +46,57 @@ export const Login = () => {
   //   }, []);
 
   return (
-    <>
-      <div>
-        <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-          <label htmlFor="username">
-            Nombre:&nbsp;
-            {errors.name?.type === 'required' && (
-              <p className="form__error-message">* Campo requerido</p>
-            )}
-            <input
-              type="text"
-              placeholder="Ingrese su nombre de usuario"
-              id="username"
-              autoComplete="off"
-              {...register('name', { required: true })}
-            />
-          </label>
+    <div className="login">
+      <form
+        className="login-form"
+        onSubmit={handleSubmit(onSubmit)}
+        autoComplete="off">
+        <label className="login-form__label" htmlFor="username">
+          Nombre:&nbsp;
+          {errors.name?.type === 'required' && (
+            <p className="error-message">* Campo requerido</p>
+          )}
+          <input
+            className="login-form__input"
+            type="text"
+            placeholder="Ingrese su nombre de usuario"
+            id="username"
+            autoComplete="off"
+            {...register('name', { required: true })}
+          />
+        </label>
 
-          <label htmlFor="login-password">
-            Contraseña:&nbsp;
-            {errors.password?.type === 'required' && (
-              <p className="form__error-message">* Campo requerido</p>
-            )}
-            <input
-              type="password"
-              placeholder="Ingrese su Contraseña"
-              id="login-password"
-              autoComplete="off"
-              {...register('password', { required: true })}
-            />
-          </label>
-          <button type="submit">Iniciar sesión</button>
-          {/* <label htmlFor="stay-logged">
+        <label className="login-form__label" htmlFor="login-password">
+          Contraseña:&nbsp;
+          {errors.password?.type === 'required' && (
+            <p className="error-message">* Campo requerido</p>
+          )}
+          <input
+            className="login-form__input"
+            type="password"
+            placeholder="Ingrese su Contraseña"
+            id="login-password"
+            autoComplete="off"
+            {...register('password', { required: true })}
+          />
+        </label>
+        <button className="btn " type="submit">
+          Iniciar sesión
+        </button>
+        {/* <label htmlFor="stay-logged">
             <input type="checkbox" name="" id="stay-logged" />
           </label> */}
-        </form>
+      </form>
+      <div className="bg-video">
+        <video className="bg-video__content" autoPlay muted loop>
+          {/* <source
+            src="./public/1079053388-preview.mp4"
+            // type="video/webm"
+          /> */}
+          <source src="./src/assets/videos/slot.mp4" type="video/mp4" />
+          Your browser is not supported!
+        </video>
       </div>
-    </>
+    </div>
   );
 };
