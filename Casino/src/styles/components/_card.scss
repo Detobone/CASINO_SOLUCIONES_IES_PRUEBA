@@ -7,6 +7,10 @@
   margin: 1rem;
   //   margin-left: 19rem;
 
+  //   @include respond(big-desktop) {
+  //     max-width: 50%;
+  //   }
+
   &__side {
     height: 52rem;
     transition: all 0.8s ease;
@@ -88,15 +92,21 @@
   }
 
   &__details {
-    padding: 3rem;
+    padding: 2rem;
+    @include respond(phone) {
+    }
+    @include respond(big-desktop) {
+      padding: 3rem;
+    }
 
     ul {
       list-style: none;
-      width: 80%;
+      width: 85%;
       margin: 0 auto;
 
       li {
-        text-align: center;
+        // text-align: center;
+        text-align: left;
         font-size: 1.5rem;
         padding: 1rem;
 
@@ -112,8 +122,7 @@
   &__back-details {
     position: absolute;
     @include center;
-    width: 90%;
-    text-align: center;
+    width: 95%;
 
     &--anchors {
       display: inline-block;
@@ -121,5 +130,34 @@
       //   color: $color-white;
       margin: 1rem;
     }
+
+    small {
+      color: $color-white;
+    }
+
+    h2 {
+      color: $color-white;
+      font-size: $fs-big;
+    }
+
+    li {
+      align-self: flex-start;
+      text-align: left;
+    }
+  }
+}
+
+.loader {
+  animation: spin-animation 5s steps(7);
+  display: block;
+  font-size: 12rem;
+}
+
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

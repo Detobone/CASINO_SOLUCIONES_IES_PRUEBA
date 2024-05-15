@@ -49,6 +49,20 @@
 
   &__card {
     font-size: 1rem;
+    border-bottom: solid 1px $color-quaternary;
+    border-radius: 5px 5px 0 0;
+    animation: bottom-line 2s steps(4);
+    animation-timeline: view(root block);
+    animation-range: cover(y);
+
+    @keyframes bottom-line {
+      from {
+        border-bottom: none;
+      }
+      to {
+        border-bottom: solid 1px $color-quaternary;
+      }
+    }
     &:hover {
       font-weight: bolder;
     }
