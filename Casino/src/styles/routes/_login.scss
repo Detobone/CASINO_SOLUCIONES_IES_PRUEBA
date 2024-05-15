@@ -12,13 +12,11 @@
     border-radius: 5px;
     width: 35%;
     height: 40%;
-    // margin: 30% auto;
     @include center;
     padding: 1.5rem;
     font-size: $fs-medium;
     background-color: $color-primary;
     opacity: 0.8;
-    backdrop-filter: blur(100%);
 
     &__label {
       @include flexSEvenly;
@@ -30,16 +28,6 @@
       border-radius: 5px;
       font-size: $fs-big;
       padding: 0.5rem;
-    }
-    button {
-      background-color: $color-secondary;
-      height: 4rem;
-      width: fit-content;
-      padding: 0.5rem;
-      align-self: center;
-      //   opacity: 1;
-      &:hover {
-      }
     }
   }
 }

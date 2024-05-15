@@ -1,7 +1,9 @@
+import { Card } from '../components/Card';
+
 export const Operador = () => {
   return (
     <>
-      <h1>Operador</h1>
+      <Card />
     </>
   );
 };

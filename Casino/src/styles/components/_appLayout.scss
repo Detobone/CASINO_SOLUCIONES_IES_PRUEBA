@@ -27,8 +27,6 @@
   grid-area: header;
   height: 8vh;
   position: fixed;
-  // background: linear-gradient($color-primary, $color-tertiary);
-  //   margin-top: 0;
   width: 100vw;
   z-index: 10;
   // border: solid 3px rgb(78, 73, 212);
@@ -58,6 +56,7 @@
   height: auto;
   margin-top: 8vh;
   overflow: hidden;
+  margin-left: 23.5vw;
 
   &__logged {
     grid-area: main;

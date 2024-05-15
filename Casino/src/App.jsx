@@ -3,7 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Header, NavBar } from './components';
 
 export function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const location = useLocation();
   return (
     <>
@@ -21,7 +21,7 @@ export function App() {
           className={
             !isLoggedIn ||
             (!isLoggedIn && String(location.pathname) === '/inicio')
-              ? 'column-2__full-rows'
+              ? 'column-2__logged'
               : 'column-2'
           }>
           <Outlet />

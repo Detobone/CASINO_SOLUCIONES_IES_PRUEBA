@@ -35,10 +35,22 @@
     }
   }
 
+  &__login {
+    background-color: $color-secondary;
+    height: 4rem;
+    width: fit-content;
+    padding: 0.5rem;
+    align-self: center;
+  }
+
   &__form {
     background: linear-gradient();
   }
 
-  //   &__ {
-  //   }
+  &__card {
+    font-size: 1rem;
+    &:hover {
+      font-weight: bolder;
+    }
+  }
 }

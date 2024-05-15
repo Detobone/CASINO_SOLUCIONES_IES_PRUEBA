@@ -108,6 +108,7 @@ body {
   height: auto;
   margin-top: 8vh;
   overflow: hidden;
+  margin-left: 23.5vw;
 }
 .column-2__logged {
   grid-area: main;
@@ -148,8 +149,117 @@ body {
   -webkit-backdrop-filter: invert(80%);
           backdrop-filter: invert(80%);
 }
+.btn__login {
+  background-color: #ce8e47;
+  height: 4rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  align-self: center;
+}
 .btn__form {
   background: linear-gradient();
+}
+.btn__card {
+  font-size: 1rem;
+}
+.btn__card:hover {
+  font-weight: bolder;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+  margin: 1rem;
+}
+.card__side {
+  height: 52rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card__side--front {
+  background-color: #fff;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card__side--back-1 {
+  background-image: linear-gradient(to right bottom, #ecd1a5, #b46c22);
+}
+.card__rotate--front {
+  transform: rotateY(-180deg);
+}
+.card__rotate--back {
+  transform: rotateY(0deg);
+}
+.card__picture {
+  background-size: cover;
+  overflow: hidden;
+  height: 23rem;
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card__picture--1 {
+  background-image: linear-gradient(to right bottom, #ecd1a5, #b46c22), url(../../src/assets/images/slot-3.jpg);
+}
+.card__heading {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: right;
+  position: absolute;
+  top: 14rem;
+  right: 2rem;
+  width: 60%;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to right bottom, rgba(236, 209, 165, 0.85), rgba(180, 108, 34, 0.85));
+}
+.card__details {
+  padding: 3rem;
+}
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #ebefef;
+}
+.card__back-details {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+.card__back-details--anchors {
+  display: inline-block;
+  gap: 3rem;
+  margin: 1rem;
 }
 
 .header {
@@ -170,12 +280,6 @@ body {
   background-blend-mode: darken;
 }
 
-/* 
-  // background-position: cover;
-  background-origin: content-box;
-  backdrop-filter: inver(90%);
-  filter: contrast(50%);
-*/
 .nav {
   display: flex;
   justify-content: space-between;
@@ -266,8 +370,6 @@ body {
   font-size: 2rem;
   background-color: #ecd1a5;
   opacity: 0.8;
-  -webkit-backdrop-filter: blur(100%);
-          backdrop-filter: blur(100%);
 }
 .login-form__label {
   display: flex;
@@ -280,14 +382,7 @@ body {
   font-size: 2.5rem;
   padding: 0.5rem;
 }
-.login-form button {
-  background-color: #ce8e47;
-  height: 4rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.5rem;
-  align-self: center;
-}
+
 .bg-video {
   position: absolute;
   top: 0;

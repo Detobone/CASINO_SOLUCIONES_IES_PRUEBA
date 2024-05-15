@@ -4,7 +4,7 @@ import { casinosApiAuth } from '../api/casinosApi';
 import axios from 'axios';
 
 export const userAuthenticate = async (body) => {
-  const { data } = await casinosApiAuth.post('/authenticate', body);
+  const { data } = await casinosApiAuth.post('api/authenticate', body);
   console.log(data);
   return data;
 };
@@ -26,12 +26,14 @@ export const Login = () => {
     };
 
     // userAuthenticate(formData);
-
+    // localhost: 5173 / api / authenticate;
     axios
-      .post(
-        'http://smol-plus.dev2.ies-gaming.com:8282/api/authenticate',
-        formData
-      )
+      .post('/api/authenticate', formData)
+      // fetch('/api/authenticate/', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData),
+      // })
       .then((res) => {
         console.log(res);
       })
@@ -39,11 +41,6 @@ export const Login = () => {
     reset();
     console.log(formData);
   };
-
-  //   useEffect(() => {
-  //     const form = document.getElementById('login-form');
-  //     form.setAttribute('autocomplete', 'off');
-  //   }, []);
 
   return (
     <div className="login">
@@ -80,7 +77,7 @@ export const Login = () => {
             {...register('password', { required: true })}
           />
         </label>
-        <button className="btn " type="submit">
+        <button className="btn btn__login" type="submit">
           Iniciar sesión
         </button>
         {/* <label htmlFor="stay-logged">

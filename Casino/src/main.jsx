@@ -13,10 +13,9 @@ const casinoClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={casinoClient}>
-      {/* <ReactQueryDevtools> */}
+      <ReactQueryDevtools initialIsOpen={false} />
       {/* <App /> */}
       <RouterProvider router={router} />
-      {/* </ReactQueryDevtools> */}
     </QueryClientProvider>
   </React.StrictMode>
 );
