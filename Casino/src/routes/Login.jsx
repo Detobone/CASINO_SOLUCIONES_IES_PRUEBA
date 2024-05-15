@@ -5,7 +5,6 @@ import axios from 'axios';
 
 export const userAuthenticate = async (body) => {
   const { data } = await casinosApiAuth.post('api/authenticate', body);
-  console.log(data);
   return data;
 };
 export const Login = () => {

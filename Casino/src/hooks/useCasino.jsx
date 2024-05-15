@@ -6,7 +6,6 @@ export const getCasinos = async () => {
   await sleep(5);
   //  const {data} = await axios.get('/api/casinos');
   const { data } = await axios.get('../mocks/casinos.json');
-  console.log('Casinos', data);
   return data;
 };
 
@@ -25,7 +24,6 @@ export const getCasinosByOperatorID = async (operatorID = 1) => {
   casinos?.map(
     (casino) => casino.operator.id === operatorID && filterArray.push(casino)
   );
-  console.log('filterArray', filterArray);
   return filterArray;
 };
 

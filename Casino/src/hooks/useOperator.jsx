@@ -14,7 +14,6 @@ export const getOperatorByID = async (id = 1) => {
   await sleep(5);
   //  const {data} = await axios.get(`/api/operators/${id}`);
   const { data } = await axios.get('../mocks/operators.json');
-  console.log(data);
   return data;
 };
 
